@@ -6,7 +6,6 @@ def get_total(purchase_price):
     print(total_price)
 
 
-
 if __name__ == '__main__':
     purchase_price = input("What is your purchase price: ")
     get_total(purchase_price)

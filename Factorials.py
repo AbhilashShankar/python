@@ -8,13 +8,5 @@ def factorial(n):
     return fact
 
 
-
-
-
-
-
-
-
-
 if __name__ == "__main__":
     print(factorial(5))

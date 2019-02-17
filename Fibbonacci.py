@@ -24,4 +24,4 @@ def get_fibbo_odd(n):
 if __name__ == "__main__":
     x = input("How much numbers do you want: ")
     get_fibbo_odd(x)
-    # get_fibbo(100)
+    get_fibbo(100)

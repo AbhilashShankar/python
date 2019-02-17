@@ -1,0 +1,7 @@
+ To push changes to bitbucket
+ git status
+  273  git add .
+  274  git status
+  275  git commit -m
+  276  git commit -m "my python programs"
+  277  git push origin

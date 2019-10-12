@@ -26,12 +26,16 @@ def cfactorial(number):
     print(real)
 
 
-
-
-for i in range(1,11):
-    afactorial(i)
-for i in range(1,11):
-    bfactorial(i)
-for i in range(1,11):
-    cfactorial(i)
-
+for a in range(1,100):
+    for b in range (1,100):
+        if a == b:
+            continue
+        for c in range(1,100):
+            if c in [a,b]:
+                continue
+                acubed = (a*a*a)
+                bcubed =(b*b*b)
+                ccubed = (c*c*c)
+                if acubed + bcubed + ccubed == a + b + c:
+                    print(a,b,c)
+                    exit()

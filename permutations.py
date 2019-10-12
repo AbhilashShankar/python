@@ -28,3 +28,6 @@ def get_permutationssystematic():
                     if c in [a,b]:
                         continue
                     print(letterlist[a],letterlist[b],letterlist[c])
+
+if __name__ == '__main__':
+    get_permutationsrandom()

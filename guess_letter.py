@@ -25,7 +25,10 @@ for i in range(200):
             charactercount.pop(guess_number)
             charactercount.insert(guess_number, guess_letter)
 
-
+        if guess_letter == word:
+            print(list(word))
+            print("Congratulations, you guessed the word!")
+            quit()
         if charactercount == characterlist:
             print(charactercount)
             print("Congratulations, you guessed the word!")

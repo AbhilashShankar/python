@@ -1,3 +1,5 @@
+
+
 def getpalindrome(a):
     check = list()
     d = list(a)
@@ -7,8 +9,6 @@ def getpalindrome(a):
         print("This number is a palindrome")
     else:
         print("This number is not a palindrome")
-
-
 
 
 

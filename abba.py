@@ -20,8 +20,8 @@ def is_palindrome(i):
 
 def palindrome():
     for i in range(1111,9999+1):
-        if  is_palindrome(i):
-            print("{} is a palindrome").format(i)
+        if is_palindrome(i):
+            print("{} is a palindrome".format(i))
 
 if __name__ == "__main__":
     palindrome()

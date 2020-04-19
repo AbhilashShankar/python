@@ -1,5 +1,3 @@
-
-
 def getpalindrome(a):
     check = list()
     d = list(a)

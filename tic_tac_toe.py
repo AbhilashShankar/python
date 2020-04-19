@@ -145,58 +145,73 @@ def play_computer():
                         break
 
         #horizontal
-        if board[0] == board[1] == board[2] == "x":
-                print_board()
-                print("X won")
-                exit()
-        if board[3] == board[4] == board[5] == "x":
-                print_board()
-                print("X won")
-                exit()
-        if board[6] == board[7] == board[8] == "x":
+        def Xcheckboard(x,y,z):
+            if board[x] == board[y] == board[z] == "x":
                 print_board()
                 print("X won")
                 exit()
 
-        if board[0] == board[1] == board[2] == "o":
+        def Ocheckboard(x,y,z):
+            if board[x] == board[y] == board[z] == "x":
                 print_board()
-                print("o won")
+                print("O won")
                 exit()
-        if board[3] == board[4] == board[5] == "o":
-                print_board()
-                print("o won")
-                exit()
-        if board[6] == board[7] == board[8] == "o":
-                print_board()
-                print("o won")
-                exit()
+
+        for i in range(0, 6,3):
+            Xcheckboard(0+i,1+i,2+i)
+
+        # Xcheckboard(0,1,2)
+        # Xcheckboard(3,4,5)
+        # Xcheckboard(6, 7, 8)
+
+        # if board[0] == board[1] == board[2] == "x":
+        #         print_board()
+        #         print("X won")
+        #         exit()
+
+        for i in range(0, 6, 3):
+            Ocheckboard(0+i,1+i,2+i)
+
+        # if board[0] == board[1] == board[2] == "o":
+        #         print_board()
+        #         print("o won")
+        #         exit()
+
 
         #vertical
-        if board[0] == board[3] == board[6] == "o":
-                print_board()
-                print("o won")
-                exit()
-        if board[1] == board[4] == board[7] == "o":
-                print_board()
-                print("o won")
-                exit()
-        if board[2] == board[5] == board[8] == "o":
-                print_board()
-                print("o won")
-                exit()
+        for i in range(0,2,1):
+            Ocheckboard(0 + i, 3 + i, 6+ i)
+        for i in range(0,2,1):
+            Xcheckboard(0 + i, 3 + i, 6+ i)
 
-        if board[0] == board[3] == board[6] == "x":
-                print_board()
-                print("X won")
-                exit()
-        if board[1] == board[4] == board[7] == "x":
-                print_board()
-                print("X won")
-                exit()
-        if board[2] == board[5] == board[8] == "x":
-                print_board()
-                print("X won")
-                exit()
+        # if board[0] == board[3] == board[6] == "o":
+        #         print_board()
+        #         print("o won")
+        #         exit()
+        # if board[1] == board[4] == board[7] == "o":
+        #         print_board()
+        #         print("o won")
+        #         exit()
+        # if board[2] == board[5] == board[8] == "o":
+        #         print_board()
+        #         print("o won")
+        #         exit()
+
+
+
+        # if board[0] == board[3] == board[6] == "x":
+        #         print_board()
+        #         print("X won")
+        #         exit()
+        # if board[1] == board[4] == board[7] == "x":
+        #         print_board()
+        #         print("X won")
+        #         exit()
+        # if board[2] == board[5] == board[8] == "x":
+        #         print_board()
+        #         print("X won")
+        #         exit()
+
 
         #diagonal
         if board[0] == board[4] == board[8] == "o":
@@ -224,14 +239,14 @@ def play_computer():
 
 if __name__ == '__main__':
 
-    question = raw_input("Do you want to play 2 player or computer: ")
+    question = input("Do you want to play 2 player or computer: ")
 
     if question == "2player":
         board = [" "," "," "," "," "," "," "," "," "]
         def print_board():
-            print("|{}|{}|{}|").format(board[0],board[1],board[2])
-            print("|{}|{}|{}|").format(board[3],board[4],board[5])
-            print("|{}|{}|{}|").format(board[6],board[7],board[8])
+            print("|{}|{}|{}|".format(board[0],board[1],board[2]))
+            print("|{}|{}|{}|".format(board[3],board[4],board[5]))
+            print("|{}|{}|{}|".format(board[6],board[7],board[8]))
         print_board()
 
         play_game()
@@ -239,8 +254,8 @@ if __name__ == '__main__':
     if question == "computer":
         board = [" "," "," "," "," "," "," "," "," "]
         def print_board():
-            print("|{}|{}|{}|").format(board[0],board[1],board[2])
-            print("|{}|{}|{}|").format(board[3],board[4],board[5])
-            print("|{}|{}|{}|").format(board[6],board[7],board[8])
+            print("|{}|{}|{}|".format(board[0],board[1],board[2]))
+            print("|{}|{}|{}|".format(board[3],board[4],board[5]))
+            print("|{}|{}|{}|".format(board[6],board[7],board[8]))
         print_board()
         play_computer()

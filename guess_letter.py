@@ -16,9 +16,9 @@ for i in range(len(word)):
 characterlist = list(word)
 
 
-for i in range(200):
+while True:
     guess_number = -1
-    guess_letter = raw_input("Guess a letter: ")
+    guess_letter = input("Guess a letter: ")
     for c in range(len(word)):
         guess_number = guess_number + 1
         if guess_letter == characterlist[guess_number]:
